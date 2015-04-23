@@ -28,9 +28,10 @@ public class C1_6 {
 	    return matrix;
 	}
 	
-	public static void rotateArray(int[][] matrix) {
+	//method2: create an new array to hold the result. 
+	public static int[][] rotateArray(int[][] matrix) {
 		if (matrix == null || matrix.length == 0) 
-			return ;
+			return null;
 		
 		int m = matrix.length;
 		int temp[][] = new int[m][m];
@@ -44,9 +45,6 @@ public class C1_6 {
 				temp[j][m-i-1] = matrix[i][j];   //clockwise retate 90 degrees
 				temp2[m-i-1][j] = matrix[i][j];  //clockwise rotate 180 degrees
 				temp3[m-j-1][i] = matrix[i][j];  //clockwise rotate 270 degrees
-				
-
-
 			}
 		}
 		
@@ -55,25 +53,9 @@ public class C1_6 {
 				matrix[i][j] = temp[i][j];
 			}
 		}
-		System.out.println(".............................");
-        for (int[] arr : matrix) {
-            System.out.println(Arrays.toString(arr));
-        }	
-		System.out.println(".............................");
+		
+		return matrix;
 
-        for (int[] arr : temp2) {
-            System.out.println(Arrays.toString(arr));
-        }
-		System.out.println(".............................");
-
-        for (int[] arr : temp3) {
-            System.out.println(Arrays.toString(arr));
-        }
-		System.out.println(".............................");
-
-//        for (int[] arr : temp4) {
-//            System.out.println(Arrays.toString(arr));
-//        }
         
 	}
 
