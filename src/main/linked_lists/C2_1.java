@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class C2_1 {
 	
-	public static List<Integer> removeDuplicatesWithBuffer(LinkedListNode list) {
+	public static List<Integer> removeDuplicatesWithBuffer(LinkedList<Integer> list) {
 		
 		Iterator it = list.iterator();
 		Set<Integer> tempSet = new HashSet<Integer>();
