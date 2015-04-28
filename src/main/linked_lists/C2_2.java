@@ -1,5 +1,7 @@
 package main.linked_lists;
 
+import main.linked_lists.C2_1.LinkedListNode;
+
 public class C2_2 {
 	
 	public static LinkedListNode nthToLast(LinkedListNode head, int n) {
@@ -25,27 +27,16 @@ public class C2_2 {
 	}
 	
 	public static int i = 0;
+	
 	public static LinkedListNode nthToLastRecursion(LinkedListNode head, int n) {
 		   if(head == null) {
-			   return null; 
+			   return null;
 		   }		    
 		   else {
 			   nthToLastRecursion(head.next, n);
 		    if(++i == n) return head; 
-		    return null; 
 		   }
+		   return head;
 	}
 
 }
-
-
-
-
-//class LinkedListNode {  
-//    public int data;  
-//    public LinkedListNode next;  
-//
-//    public LinkedListNode(int data) {  
-//        this.data = data;    
-//    }  
-//}

@@ -6,6 +6,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 import main.linked_lists.C2_1;
+import main.linked_lists.MyLinkedList;
+import main.linked_lists.MyLinkedList.Node;
 
 import org.junit.Test;
 
@@ -13,6 +15,35 @@ public class C2_1Test {
 
 	@Test
 	public void test() {
+		
+		MyLinkedList linkedListNode = new MyLinkedList();
+
+	    linkedListNode.add("1");
+	    linkedListNode.add("2");
+	    linkedListNode.add("3");
+
+
+	    
+	    
+
+	    
+	    System.out.println(linkedListNode.size());
+	    Node head = linkedListNode.
+	    while (head != null) {
+	    	head = head.next;
+		    System.out.println(head.data);
+
+	    }
+	    
+
+//	    C2_1.removeDuplicates(linkedListNode);
+	    
+	    System.out.println(linkedListNode.size());
+	    
+	    
+		
+		
+		
 		LinkedList<Integer> list = new LinkedList<Integer>();
 		LinkedList<Integer> result = new LinkedList<Integer>();
 
@@ -36,6 +67,7 @@ public class C2_1Test {
 	    result.add(8);
 	    	    
 	    assertEquals(C2_1.removeDuplicatesWithBuffer(list), result);
+	    
 
 	    
 	}
