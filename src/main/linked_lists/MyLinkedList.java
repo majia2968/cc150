@@ -46,7 +46,7 @@ public class MyLinkedList {
 		listCount++;// increment the number of elements variable
 	}
 
-	public Object get(int index)
+	public Node get(int index)
 	// returns the element at the specified position in this list.
 	{
 		// index must be 1 or higher
@@ -60,9 +60,9 @@ public class MyLinkedList {
 
 			crunchifyCurrent = crunchifyCurrent.getNext();
 		}
-		return crunchifyCurrent.getData();
+		return crunchifyCurrent;
 	}
-
+	
 	public boolean remove(int index)
 	// removes the element at the specified position in this list.
 	{

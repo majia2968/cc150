@@ -29,24 +29,21 @@ public class C2_1 {
 		return list;
 	}
 	
-	public static void removeDuplicates(LinkedList<Node> linkedListNode) {
-		Node head = linkedListNode.getFirst(); 
+	public static void removeDuplicates(MyLinkedList linkedListNode) {
+		Node head = linkedListNode.get(1);
 		Node current = head;	
 		
 		while (current != null) {
 			Node next = current.next;
-	    	System.out.println("next" + current.data);
-	    	System.out.println("nextnext" + next.data);
-
+			int i = 2;
 			while (next != null) {
-				if (current.data == next.data) {
-		            current.next = next.next;
-			    	System.out.println("sss" + current.data);
-
+				if (current.data.toString() == next.data.toString()) {
+//		            current.next = next.next;
+			    	linkedListNode.remove(i);
 		            break;
 		        }
 				next = next.next;
-//		    	System.out.println("next" + current.data);
+				i++;
 
 			}
 			current = current.next;
