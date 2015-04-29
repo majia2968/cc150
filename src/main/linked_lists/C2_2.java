@@ -1,16 +1,17 @@
 package main.linked_lists;
 
-import main.linked_lists.C2_1.LinkedListNode;
+import main.linked_lists.MyLinkedList.Node;
+
 
 public class C2_2 {
 	
-	public static LinkedListNode nthToLast(LinkedListNode head, int n) {
+	public static Node nthToLast(Node head, int n) {
 		if ((head == null) || n < 1) {
 			return null;
 		}
 		
-		LinkedListNode p1 = head;
-		LinkedListNode p2 = head;
+		Node p1 = head;
+		Node p2 = head;
 		
 		for (int j = 0; j < n - 1; j++) {
 			if (p2 == null) {
@@ -28,7 +29,7 @@ public class C2_2 {
 	
 	public static int i = 0;
 	
-	public static LinkedListNode nthToLastRecursion(LinkedListNode head, int n) {
+	public static Node nthToLastRecursion(Node head, int n) {
 		   if(head == null) {
 			   return null;
 		   }		    
