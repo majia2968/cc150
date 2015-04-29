@@ -20,20 +20,19 @@ public class C2_1Test {
 
 	    linkedListNode.add("1");
 	    linkedListNode.add("2");
-	    linkedListNode.add("3");
+	    linkedListNode.add("1");
 
 
-	    
-	    
+//	    Node head = new Node(linkedListNode.get(1));
+	    C2_1.removeDuplicates(linkedListNode.getHead());
 
 	    
 	    System.out.println(linkedListNode.size());
-	    Node head = linkedListNode.
-	    while (head != null) {
-	    	head = head.next;
-		    System.out.println(head.data);
-
-	    }
+//	    while (head != null) {
+//	    	head = head.next;
+//		    System.out.println(head.data);
+//
+//	    }
 	    
 
 //	    C2_1.removeDuplicates(linkedListNode);

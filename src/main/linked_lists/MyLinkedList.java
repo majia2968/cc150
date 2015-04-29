@@ -4,6 +4,14 @@ public class MyLinkedList {
 
 	// reference to the head node.
 	private Node head;
+	public Node getHead() {
+		return head;
+	}
+
+	public void setHead(Node head) {
+		this.head = head;
+	}
+
 	private int listCount;
 
 	// LinkedList constructor

@@ -29,8 +29,7 @@ public class C2_1 {
 		return list;
 	}
 	
-	public static void removeDuplicates(LinkedList<Node> linkedListNode) {
-		Node head = linkedListNode.getFirst(); 
+	public static void removeDuplicates(Node head) {
 		Node current = head;	
 		
 		while (current != null) {
@@ -39,7 +38,7 @@ public class C2_1 {
 	    	System.out.println("nextnext" + next.data);
 
 			while (next != null) {
-				if (current.data == next.data) {
+				if (current.data.toString() == next.data.toString()) {
 		            current.next = next.next;
 			    	System.out.println("sss" + current.data);
 
