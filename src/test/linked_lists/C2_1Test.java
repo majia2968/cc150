@@ -21,27 +21,17 @@ public class C2_1Test {
 	    linkedListNode.add("1");
 	    linkedListNode.add("2");
 	    linkedListNode.add("1");
+	    linkedListNode.add("4");
 
-
-//	    Node head = new Node(linkedListNode.get(1));
-	    C2_1.removeDuplicates(linkedListNode.getHead());
-
+	    C2_1.removeDuplicates(linkedListNode);
+	    Node head = linkedListNode.get(1);
+	    while (head != null) {
+		    System.out.println(head.getData());
+		    head = head.next;
+	    }
 	    
-	    System.out.println(linkedListNode.size());
-//	    while (head != null) {
-//	    	head = head.next;
-//		    System.out.println(head.data);
-//
-//	    }
-	    
-
-//	    C2_1.removeDuplicates(linkedListNode);
-	    
-	    System.out.println(linkedListNode.size());
-	    
-	    
-		
-		
+	    assertEquals(linkedListNode.size(), 3);
+	    	    
 		
 		LinkedList<Integer> list = new LinkedList<Integer>();
 		LinkedList<Integer> result = new LinkedList<Integer>();
