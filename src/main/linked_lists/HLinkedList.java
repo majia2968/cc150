@@ -5,7 +5,7 @@ public class HLinkedList<T> {
 	private Node<T> head;
 	
 	public HLinkedList() {
-		head = new Node(null);
+		head = new Node<T>(null);
 	}
 	public void add(T data) {
 		Node<T> current = head;
@@ -43,7 +43,7 @@ public class HLinkedList<T> {
 			this.data = data;
 		}
 
-		public Node(T data, Node next) {
+		public Node(T data, Node<T> next) {
 			this.data = data;
 			this.next = next;
 		}
@@ -56,7 +56,7 @@ public class HLinkedList<T> {
 			this.data = data;
 		}
 
-		public Node getNext() {
+		public Node<T> getNext() {
 			return next;
 		}
 
