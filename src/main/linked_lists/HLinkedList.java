@@ -18,6 +18,18 @@ public class HLinkedList<T> {
 		current.next = node;		
 	}
 	
+	public void addToFirst(T data) {
+		Node<T> node = new Node<T>(data);
+		node.next = head;
+		head = node;
+		
+	}
+	
+	public void deleteFirst() {
+		Node<T> current = head;
+		current = current.next;
+	}
+	
 	public void remove(T data) {
 		
 	}
