@@ -3,10 +3,21 @@ package main.linked_lists;
 public class HLinkedList<T> {
 
 	private Node<T> head;
+	private int listCount;
 	
 	public HLinkedList() {
 		head = new Node<T>(null);
+		listCount = 0;
 	}
+	
+	public int getListCount() {
+		return listCount;
+	}
+	
+	public void setListCount(int listCount) {
+		this.listCount = listCount;
+	}
+	
 	public void add(T data) {
 		Node<T> current = head;
 		Node<T> node = new Node<T>(data);
@@ -14,20 +25,22 @@ public class HLinkedList<T> {
 		while (current.next != null) {
 			current = current.next;
 		}
-		
+		listCount++;
 		current.next = node;		
 	}
 	
 	public void addToFirst(T data) {
 		Node<T> node = new Node<T>(data);
-		node.next = head;
-		head = node;
+		node.next = head.next;
+		head.next = node;
+		listCount++;
 		
 	}
 	
 	public void deleteFirst() {
 		Node<T> current = head;
 		current = current.next;
+		listCount--;
 	}
 	
 	public void remove(T data) {

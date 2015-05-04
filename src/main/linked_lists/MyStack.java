@@ -15,5 +15,9 @@ public class MyStack<T> {
 	public String toString() {
 		return hll.toString();
 	}
+	
+	public int length() {
+		return hll.getListCount();
+	}
 
 }

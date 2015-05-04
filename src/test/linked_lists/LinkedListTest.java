@@ -25,6 +25,8 @@ public class LinkedListTest {
 
 //		ms.pop();
 		System.out.println(ms.toString());
+		System.out.println(ms.length());
+
 		
 
 	}
