@@ -16,7 +16,10 @@ public class C3_1Test {
 		stack.push(1, 4);
 		stack.push(1, 5);
 		stack.push(1, 6);
+		assertEquals(stack.peek(1), 6);
 		System.out.println(stack.toString());
+		assertEquals(stack.pop(1), 6);
+		assertEquals(stack.peek(1), 5);
 	}
 
 }

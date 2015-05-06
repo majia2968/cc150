@@ -23,7 +23,7 @@ public class C3_1 {
 		return value;
 	}
 	
-	int peek(int stack) {
+	public int peek(int stack) {
 		return buffer[stackPointer[stack]].value;
 	}
 	
